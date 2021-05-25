@@ -1,0 +1,128 @@
+(defcfg
+  ;; ** For Linux **
+  ;;input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  ;; input  (device-file "/dev/input/by-id/usb-Matias_Ergo_Pro_Keyboard-event-kbd")
+  output (uinput-sink "KMonad seniply-iso-wide")
+  cmp-seq cmp
+
+  ;; ** For Windows **
+  ;; input  (low-level-hook)
+  ;; output (send-event-sink)
+
+  ;; ** For MacOS **
+  ;; input  (iokit-name "my-keyboard-product-string")
+  ;; output (kext)
+
+  fallthrough true
+)
+
+(defsrc
+  esc      f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  grv      1     2     3     4     5     6     7     8     9     0     -     =     bspc
+  tab      q     w     e     r     t     y     u     i     o     p     [     ]
+  caps     a     s     d     f     g     h     j     k     l     ;     '     \     ret
+  lsft  nubs  z     x     c     v     b     n     m     ,     .     /     rsft
+  lctl        lmet  lalt              spc               ralt  rmet  cmp   rctl
+)
+
+(defalias 
+  ly_qw (layer-switch qwerty-sp)
+  ly_dh (layer-switch colemak-dh-sp)
+)
+
+(defalias
+  ext  (layer-toggle extend) ;; Bind 'ext' to the Extend Layer
+  fun  (layer-toggle function) ;; Bind 'fun' to the Function Layer
+  sym1 (layer-toggle symbols1) ;; Bind 'sym1' to Symbols Layer 1
+  sym2 (layer-toggle symbols2) ;; Bind 'sym2' to Symbols Layer 2
+)
+
+(defalias 
+  ls_s (sticky-key 1500 lsft)
+  lc_s (sticky-key 1500 lctl)
+  la_s (sticky-key 1500 lalt)
+  ra_s (sticky-key 1500 ralt)
+  lsc_s (around @lc_s @ls_s)
+  lac_s (around @lc_s @la_s)
+)
+
+(defalias
+  cpy C-c
+  pst C-v
+  cut C-x
+  udo C-z
+  all C-a
+  fnd C-f
+  bk A-left
+  fw A-right
+  v+ VolumeUp
+  v- VolumeDown 
+  v0 Mute
+  d' #(cmp ')
+  dum #(cmp @)
+)
+
+(deflayer colemak-dh-sp
+  esc      f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  grv      1     2     3     4     5     6     7     8     9     0     -     =     spc
+  tab      q     w     f     p     b     [     j     l     u     y     '     \
+  lmet     a     r     s     t     g     ]     m     n     e     i     o     ;     ret
+  lsft  z     x     c     d     v     nubs  /     k     h     ,     .     rsft
+  lctl        lalt  @ext              lsft              spc   @sym1 @sym1 _
+)
+
+(deflayer qwerty-sp
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _ 
+  _    _      _     _     _     _     _     _     _     _     _     _     _
+  _           lalt  @ext              _                 @sym1 ralt  rmet  _
+)
+
+
+(deflayer extend
+  _        play rewind previoussong nextsong ejectcd refresh brdn brup www mail prog1 prog2
+  _        f1    f2    f3    f4    f5    f6    f7    f8    f9   f10    f11   f12   _
+  _        esc   @bk   @fnd  @fw   ins   ssrq  pgup  home  up    end   caps  cmp
+  _        @la_s lmet  @ls_s @lc_s @ra_s slck  pgdn  lft   down  rght  del   menu  _
+  _     @udo  @cut  @cpy  tab   @pst  _     cmp   ret   bks   @lsc_s @lac_s _
+  _            _    _                 _                 ret   @fun  _     _
+)
+
+(deflayer function
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        @ly_qw @ly_dh _   ssrq  _     _     f12   f7    f8    f9    @v+   _
+  _        @la_s lmet  @ls_s @lc_s @ra_s _     f11   f4    f5    f6    @v-   _     _
+  _     _     S-@cut S-@cpy S-tab S-@pst _   @v0  f10   f1    f2    f3    _ 
+  _          _    _                   _                 _     _     _     _
+)
+
+(deflayer symbols1
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        S-1   S-2   S-3   S-4   S-5   «     =     7     8     9     +     _
+  _        ;     :     {     \(    [     »     *     4     5     6     -     _     _
+  _     S-6   S-7   }     \)    ]     `     _     0     1     2     3    /
+  _           _     @fun             @sym2             _     _     _    _
+)
+
+(deflayer symbols2
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        ¡     €     …     ¢     ½     _     ≠     ∞     @dum  №     ±     _
+  _        \\    S-\\  §     ™     ®     _     ×     ←     @d'   →     \_    _     _
+  _     `     S-`   ©     nubs S-nubs S-`   _     °     •     _     _     ÷
+  _           _     _                 _                 _     _     _     _
+)
+
+(deflayer empty
+  _        _    _    _    _    _    _    _    _    _    _    _    _    
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _ 
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _ 
+  _    _     _    _    _    _    _    _    _    _    _    _    _ 
+  _        _    _              _              _    _    _    _
+)

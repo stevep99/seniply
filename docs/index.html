@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/extra.css">
+<script>
+var slideIndex = 0;
+var slideCallback;
+
+function advanceSlide(n, auto) {
+    slideIndex+=n;
+    showSlide(auto)
+}
+
+function showSlide(auto){
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  if (slideIndex >= slides.length) {slideIndex = 0}
+  if (slideIndex < 0) {slideIndex = slides.length-1}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slides[slideIndex].style.display = "block";  
+  // show next slide after a delay
+  clearTimeout(slideCallback);
+  if (auto) {
+    slideCallback = setTimeout(function(){advanceSlide(1, true)}, 8000);
+  }
+}
+</script>
+
+
+<title>Colemak-DH Seniply</title>
+<meta property="og:title" content="Colemak-DH Seniply" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Colemak-DH Seniply" />
+
+  </head>
+
+  <body onLoad="showSlide(false)">
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+			<div style="float:left">
+				<h1 id="project_title">Seniply</h1>
+			</div>
+			<div style="float:right; display: flex; align-items: center;">
+				<h4><a href="https://github.com/stevep99/seniply/tree/master/downloads">Download&nbsp;<img src="gfx/icon_download.png" alt="[download]" style="vertical-align:bottom"/></a></h4>
+			</div>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+<p>Seniply is an ergonomic, minimal keyboard layout for a keyboard with at least 34 keys. The minimum requirement is 30 keys in the main body plus 4 thumb-keys. All the features (and more) of a standard full-size keyboard are available by making use of six layers, which are activated via the thumb keys. The default base layer is <a href="https://colemakmods.github.io/mod-dh/">Colemak-DH</a>.</p>
+
+<p>It is designed to be compatible with both small ergo keyboards and traditional keyboards. Special firmware such as QMK isn't required and non-programmable boards are well-supported: the reference implementation is achieved using <a href="https://github.com/david-janssen/kmonad">KMonad</a>.</p> 
+
+<p>See the <a href="#hardware">hardware section</a> below for more details on recommended keyboard types.</p>
+
+<!-- modal dialog for image display -->
+<div id="modal" class="modal">
+  <img class="modal-content" id="modalImage">
+</div>
+<script>
+var modal = document.getElementById("modal");
+modal.addEventListener("click", function(event) {
+  if (modal.style.display = "block") {
+    closeModalImage();
+  }
+})
+modal.keydown(function(event) { 
+  if (event.keyCode == 27) { 
+    closeModalImage();
+  }
+});
+function showModalImage(srcImg) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = srcImg.src;
+  var span = document.getElementsByClassName("close")[0];
+}
+function closeModalImage() {
+    modal.style.display = "none";
+}
+</script>
+
+
+<div class="slideshow-container">
+
+<div class="slide fade">
+<figure id="seniply_matrix_all_us">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_all_us.png" alt="Colemak-DH Seniply (US) for a small matrix keyboard"/>
+  <figcaption>Colemak-DH Seniply for a matrix-like keyboard with 34 keys assuming underlying US keyboard mapping.</figcaption>
+</figure>
+</div>
+
+<div class="slide fade" style="display:none">
+<figure id="seniply_ansi_split_all_us">
+  <img onclick="showModalImage(this)" src="gfx/seniply_ansi_split_all_us.png" alt="Colemak-DH Seniply (US) for a split ANSI keyboard"/>
+  <figcaption>Colemak-DH Seniply for a split ANSI keyboard with US mappings. Keys that are not required are greyed out.</figcaption>
+</figure>
+</div>
+
+<div class="slide fade" style="display:none">
+<figure id="seniply_ansi_wide_all_us">
+  <img onclick="showModalImage(this)" src="gfx/seniply_ansi_wide_all_us.png" alt="Colemak-DH Seniply (US) for a split ANSI keyboard"/>
+  <figcaption>Colemak-DH Seniply for a traditional ANSI keyboard with US mappings. Keys that are not required are greyed out.</figcaption>
+</figure>
+</div>
+
+<div class="slide fade" style="display:none">
+<figure id="seniply_matrix_all_uk">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_all_uk.png" alt="Colemak-DH Seniply (UK) for a small matrix keyboard"/>
+  <figcaption>Colemak-DH Seniply for a matrix-like keyboard with 34 keys assuming underlying UK keyboard mapping.</figcaption>
+</figure>
+</div>
+
+<div class="slide fade" style="display:none">
+<figure id="seniply_iso_split_all_uk">
+  <img onclick="showModalImage(this)" src="gfx/seniply_iso_split_all_uk.png" alt="Colemak-DH Seniply (UK) for a split ISO keyboard"/>
+  <figcaption>Colemak-DH Seniply for a split ISO keyboard with UK mappings. Keys that are not required are greyed out.</figcaption>
+</figure>
+</div>
+
+<div class="slide fade" style="display:none">
+<figure id="seniply_iso_wide_all_uk">
+  <img onclick="showModalImage(this)" src="gfx/seniply_iso_wide_all_uk.png" alt="Colemak-DH Seniply (UK) for a split ISO keyboard"/>
+  <figcaption>Colemak-DH Seniply for a traditional ISO keyboard with UK mappings. Keys that are not required are greyed out.</figcaption>
+</figure>
+</div>
+
+<a class="slide_prev" onclick="advanceSlide(-1, false)">&#10094;</a>
+<a class="slide_next" onclick="advanceSlide(1, false)">&#10095;</a>
+
+</div>
+
+
+<figure id="seniply_key">
+  <img src="gfx/seniply_key.png"/>
+</figure>
+
+<a name="features"><h3>Features</h3></a>
+
+<ul>
+  <li>Low travel distance by keeping fingers near their home positions; movements larger that 1 key-unit are avoided.</li>
+  <li>Well positioned thumb-keys are used to access layers - six layers are supported - with no need for dual-role keys.</li>
+  <li>Sticky (one-shot) modifiers are used to fully support Ctrl, Alt, etc, without the need for dedicated keys. No more modifiers in awkward corners of the keyboard.</li>
+  <li>Layer mappings designed to be intuitive and easy-to-learn.</li>
+  <li>Easily adjustable and expandable to meet user requirements (e.g. to support multilingual typing).</li>
+  <li>Compatible with standard staggered keyboards, but for best results, a keyboard with a split spacebar is recommended.</li>
+</ul>
+
+<a name="layers"><h3>Layers</h3></a>
+
+<h4>Base Layer</h4>
+
+<figure id="seniply_matrix_base">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_base.png" alt="Seniply base layer"/>
+  <figcaption>The Seniply base layer, using Colemak-DH.</figcaption>
+</figure>
+
+<p>The base alpha layer is <a href="https://colemakmods.github.io/mod-dh/">Colemak-DH</a>, modified slightly so that apostrophe is moved to the semicolon location. Being the more frequent character, apostrophe is more deserving on a spot on the base layer when using a minimalist layout. (Semicolon and colon are still easy to access on a symbols layer). The second layer is the standard Shift layer, and is selected by holding down the inner-left thumb-key, located on the bottom-most row, approximately below the T key. The space bar is by default on the right thumb.</p>
+
+<h4>Extend Layer</h4>
+
+<figure id="seniply_matrix_ext">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_ext.png" alt="Seniply Extend layer"/>
+  <figcaption>The Seniply Extend layer, activated with a left-thumb key.<br/>Key: <code>⇧</code>&nbsp;Shift, <code>⎈</code>&nbsp;Ctrl, <code>⎇</code>&nbsp;Alt, <code>RA</code>&nbsp;AltGr</code>, <code>⇪</code>&nbsp;Caps, <code>⇥</code>&nbsp;Tab, <code>⇱ ⇲</code>&nbsp; Home/End, <code>⇞ ⇟</code>&nbsp;Page&nbsp;up/down.</figcaption>
+</figure>
+
+<p>Navigation and other non-printable functions are provided by the Extend layer, which is heavily based on <a href="https://dreymar.colemak.org/layers-extend.html">DreymaR's original</a>. The Extend layer is selected via the left-most thumb key, typically located below the S key. This layer provides navigation, page up/down, home/end on the right hand side, and backspace is assigned to a comfortable spot on a strong index finger (Ext-H).</p>
+
+<p>On the left-hand side are home-row modifiers for Alt, Super, Shift, Control and AltGr on A,R,S,T,G respectively. As with DreymaR's Extend, these modifiers can be held down and combined with other Extend functions such as arrows etc, to comfortably produce combinations like <code>Ctrl&nbsp;⌫</code>, <code>Alt&nbsp;←</code>. Importantly though, these home-row modifiers are implemented as one-shot (sticky) keys, which makes it easy to do Control and Alt shortcuts without needing dedicated modifier keys.</p>
+
+<p>Examples:<br/>
+(i) Output Ctrl-A using <code>Ext-t&nbsp;a</code><br/>
+(ii) Output Ctrl-W using <code>Ext-t&nbsp;w</code><br/>
+(iii) Output Alt-Tab using <code>Ext-a-d</code></p>
+
+<h4>Function Layer</h4>
+
+<figure id="seniply_matrix_fun">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_fun.png" alt="Seniply Function layer"/>
+  <figcaption>The Seniply Function layer, activated by pressing two-thumb keys.</figcaption>
+</figure>
+
+<p>To accomodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. The function keys are on the right-hand side, following a familiar Numpad-like convention for ease of learning. As with the Extend layer, home-row modifiers are available to combine with function keys. The function layer also provides a mechanism to switch between layouts (e.g. to switch to Qwerty for gaming) via the @L1,@L2,@L3 mappings. To access the function layer, the two outmost thumb-keys are held down. Alternatively, on keyboards with good support for multiple thumb keys, you may assign an unused thumb key for selecting this layer.</p>
+
+<p>Examples:<br/>
+(i) Output F11 using <code>Ext-Sym-m</code><br/>
+(ii) Output Ctrl-F5 using <code>Ext-Sym-t-e</code><br/>
+(iii) Output Alt-F2 using <code>Ext-Sym-a-,</code></p>
+
+<h4>Symbols Layer</h4>
+
+<figure id="seniply_matrix_sym1_us">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_sym1_us.png" alt="Seniply Sym1 layer"/>
+  <figcaption>The Seniply Sym1 layer (US variant), activated via a right-thumb key.</figcaption>
+</figure>
+<figure id="seniply_matrix_sym1_uk">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_sym1_uk.png" alt="Seniply Sym1 layer"/>
+  <figcaption>The Seniply Sym1 layer (UK variant), activated via a right-thumb key.</figcaption>
+</figure>
+<div style="text-align:center">
+  <input type="radio" id="seniply_matrix_sym1_panel1" name="seniply_matrix_sym1" checked="checked" onclick="showSeniplyMatrixSym1(1)"/>US variant &nbsp;&nbsp;
+  <input type="radio" id="seniply_matrix_sym1_panel2" name="seniply_matrix_sym1" onclick="showSeniplyMatrixSym1(2)";>UK variant
+</div>
+<script>
+  function showSeniplyMatrixSym1(visibleId) {
+    var panel1 = document.getElementById('seniply_matrix_sym1_us');
+    var panel2 = document.getElementById('seniply_matrix_sym1_uk');
+    if (visibleId == 1) {
+      panel1.style.display = "block";
+      panel2.style.display = "none";
+    } else if (visibleId == 2) {
+      panel1.style.display = "none";
+      panel2.style.display = "block";  
+    }
+  }
+  showSeniplyMatrixSym1(1);
+</script>
+
+  <p>Additional symbols are provided by Symbols1 and Symbols2 layers. The Symbols1 layer has the most frequent symbols and is activated by holding the right-most thumb key, usually located beneath E. Numbers and basic mathematical symbols on the right-hand side, arranged in NumPad style for convenience. The most common remaining symbols, such as brackets, colon and semicolon, and the shifted number characters are on the left-hand side. For easy recall the top-row symbols on the <code>QWFPB</code> keys match the shifted-number symbols for <code>12345</code>. Note also that each Bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since open and closing brackets are not usually typed together, and in fact the opening bracket is more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
+
+<figure id="seniply_matrix_sym2_us">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_sym2_us.png" alt="Seniply Sym2 layer"/>
+  <figcaption>The Seniply Sym2 layer (US variant), activated by pressing two thumb keys.</figcaption>
+</figure>
+<figure id="seniply_matrix_sym2_uk">
+  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_sym2_uk.png" alt="Seniply Sym2 layer"/>
+  <figcaption>The Seniply Sym2 layer (UK variant), activated by pressing two thumb keys.</figcaption>
+</figure>
+<div style="text-align:center">
+  <input type="radio" id="seniply_matrix_sym2_panel1" name="seniply_matrix_sym2" checked="checked" onclick="showSeniplyMatrixSym2(1)"/>US variant &nbsp;&nbsp;
+  <input type="radio" id="seniply_matrix_sym2_panel2" name="seniply_matrix_sym2" onclick="showSeniplyMatrixSym2(2)";>UK variant
+</div>
+<script>
+  function showSeniplyMatrixSym2(visibleId) {
+    var panel1 = document.getElementById('seniply_matrix_sym2_us');
+    var panel2 = document.getElementById('seniply_matrix_sym2_uk');
+    if (visibleId == 1) {
+      panel1.style.display = "block";
+      panel2.style.display = "none";
+    } else if (visibleId == 2) {
+      panel1.style.display = "none";
+      panel2.style.display = "block";  
+    }
+  }
+  showSeniplyMatrixSym2(1);
+</script>
+
+<p>The Symbols2 layer has the remaining standard symbols found on keyboards, such as <code>~&nbsp;\&nbsp;|</code>. It also makes available some mathematical symbols not usually found in most layouts, such as <code>½&nbsp;…&nbsp;±&nbsp;÷&nbsp;×</code>, but these can be customized if you have different characters you are more likely to type. When using the KMonad implementation, for these characters to be printed correctly, you must ensure compose key combinations are configured consistently in both KMonad and the OS. On systems that don't support compose characters natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows.</p>
+
+<p>A couple of dead-keys have also been added, labelled <code>d'</code> and <code>d¨</code> for producing accented characters such as <code>é</code> and <code>ö</code>. The Symbols2 layer is activiated by first holding the Symbols1 thumb key and then holding down Shift. On keyboards with good thumb key support you could opt to use a dedicated single key instead.</p>
+
+<p>One further note regarding symbols, it is possible to type any of the symbols that would normally be made available via the AltGr key, where configured. For example, if AltGr-a usually produces <code>æ</code> on your system, you can reproduce this with <code>Ext-G&nbsp;a</code>. Using this technique can substantially increase the number of symbols that are available for you to type using keys right under your fingertips!</p>
+
+<a name="hardware"><h3>Hardware</h3></a>
+
+<p>Seniply works best on the following types of hardware:</p>
+<ul>
+	<li>Small ergonomic boards such as the <a href="https://olkb.com/collections/planck">Planck</a>, <a href="https://blog.splitkb.com/blog/introducing-the-kyria">Kyria</a>, <a href="https://shop.keyboard.io/products/keyboardio-atreus">Atreus</a>, <a href="https://mechboards.co.uk/shop/kits/helidox-corne-kit/">Corne</a>, <a href="https://mechboards.co.uk/shop/kits/lets-split-kit/">Lets Split</a>, etc.</li>
+	<li>Larger ergonomic boards such as the <a href="https://olkb.com/collections/preonic">Preonic</a>, <a href="https://ergodox-ez.com/">Ergodox</a>, <a href="https://www.zsa.io/moonlander/">Moonlander</a>, etc. In this case, usage of the additional keys is optional.</li>
+	<li>Traditional staggered keyboards that are physically split or have split spacebar, such as <a href="https://matias.ca/ergopro/pc/">Ergo Pro</a>, <a href="https://ultimatehackingkeyboard.com/">UHK</a>, <a href="https://dygma.com/products/dygma-raise">Dygma Raise</a>, <a href="https://www.mistelkeyboard.com/products/d11cf7a73da49468e2a530b4cf18e76c">Mistel Barocco</a>, or similar.</li>
+</ul>
+
+<p>It is also works satisfactorily on traditional staggered keyboards with smaller (at most 5u wide) spacebar, such as is typically found on laptops. On these keyboards the <a href="https://colemakmods.github.io/ergonomic-mods/wide.html">Wide Mod</a> is required.</p>
+
+<p>Other keyboards, especially those with a large spacebars, are not suitable for Seniply's thumb-based layer selection system. But you may adapt it somewhat by using other keys, such as CapsLock and Enter, as viable alternative layer selection keys.</p>
+
+<a name="download"><h3>Download</h3></a>
+
+<a href="https://github.com/stevep99/seniply/tree/master/downloads"><img src="gfx/icon_download.png" alt="[download]" style="vertical-align:bottom"/></a>
+<a href="https://github.com/stevep99/seniply/tree/master/downloads"><b>Download Section</b></a>
+
+<p>Currently supported:</p>
+
+<div style="margin-left:15px; margin-bottom:15px">
+&#8226; Seniply KMonad - Full implementation for non-programmable keyboards - Recommended!<br/>
+&#8226; Seniply Chrysalis - for keyboards supported by the <a href="https://github.com/keyboardio/Chrysalis">Chrysalis</a> configurator.<br/>
+&#8226; Seniply XKB - SteveP's fork of DreymaR's Big Bag for XKB - mostly implemented.<br/>
+&#8226; Seniply AHK - An AutoHotKey implementation is coming soon!<br/>
+</div>
+
+<a name="naming"><h3>Naming</h3></a>
+
+<p>The name <i>Seniply</i> derives from <i>seni</i> (six) and <i>ply</i> (layer).</p>
+
+<a name="acknowledgements"><h3>Acknowledgements</h3></a>
+
+<ul>
+  <li><a href="https://github.com/david-janssen/kmonad">KMonad</a> keyboard configuration tool.</li>
+  <li><a href="https://dreymar.colemak.org/">DreymaR's Big Bag</a> (especially the Extend Layer).</li>
+  <li><a href="https://github.com/manna-harbour/qmk_firmware/blob/miryoku/users/manna-harbour_miryoku/miryoku.org">Miryoku Layout</a></li>
+</ul>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <!-- <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p> -->
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
+

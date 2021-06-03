@@ -60,6 +60,12 @@
   v0 Mute
   d' #(cmp ')
   dum #(cmp @)
+  mpl play
+  mps previoussong
+  mns nextsong
+  mrw rewind
+  mpp pause
+  mst stop  
 )
 
 (deflayer colemak-dh-sp
@@ -81,7 +87,7 @@
 )
 
 (deflayer extend
-  _        play rewind previoussong nextsong ejectcd refresh brdn brup www mail prog1 prog2
+  _        @mpl  @mrw  @mps  @mns ejectcd refresh brdn brup www mail   prog1 prog2
   _        f1    f2    f3    f4    f5    f6    f7    f8    f9   f10    f11   f12   _
   _        esc   @bk   @fnd  @fw   ins   ssrq  pgup  home  up    end   caps  cmp   menu
   _        @la_s lmet  @ls_s @lc_s @ra_s slck  pgdn  lft   down  rght  del   _
@@ -92,9 +98,9 @@
 (deflayer function
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @ly_qw @ly_dh _   ssrq  _     _     f12   f7    f8    f9    @v+   _     _
-  _        @la_s lmet  @ls_s @lc_s @ra_s _     f11   f4    f5    f6    @v-   _
-  _           S-@cut S-@cpy S-tab S-@pst _   @v0  f10   f1    f2    f3    _ 
+  _        _     _     _     ssrq  _     _     f12   f7    f8    f9   @ly_qw _     _
+  _        @la_s lmet  @ls_s @lc_s @ra_s _     f11   f4    f5    f6   @ly_dh _
+  _           S-@cut S-@cpy S-tab S-@pst _   _    f10   f1    f2    f3    _ 
   _          _    _                   _                 _     _     _     _
 )
 
@@ -110,9 +116,9 @@
 (deflayer symbols2
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        ¡     €     …     ¢     ½     _     ≠     ∞     @dum  №     ±     _     _
-  _        \\    S-\\  §     ™     ®     _     ×     ←     @d'   →     \_    _
-  _           S-`   ©     nubs S-nubs `   _     °     •     _     _     ÷
+  _        @v0   @v-   @v+   @mns  @mps  _     ≠     ∞     @dum  №     ±     _     _
+  _        `     S-`   \\    S-\\  @mst  _     ×     ←     @d'   →     \_    _
+  _           S-nubs ©    @mpl  @mpp  nubs  _     °     •     _     _     ÷
   _           _     _                 _                 _     _     _     _
 )
 

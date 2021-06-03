@@ -61,6 +61,12 @@
   v0 Mute
   d' #(cmp ')
   dum #(cmp @)
+  mpl play
+  mps previoussong
+  mns nextsong
+  mrw rewind
+  mpp pause
+  mst stop
 )
 
 (deflayer colemak-dh-sp
@@ -83,7 +89,7 @@
 
 
 (deflayer extend
-  _        play rewind previoussong nextsong ejectcd refresh brdn brup www mail prog1 prog2
+  _        @mpl  @mrw  @mps  @mns ejectcd refresh brdn brup www mail   prog1 prog2
   _        f1    f2    f3    f4    f5    f6    f7    f8    f9   f10    f11   f12   ret
   _        esc   @bk   @fnd  @fw   ins   pgup  home  up    end   caps  ssrq  slck
   _        @la_s lmet  @ls_s @lc_s @ra_s pgdn  lft   down  rght  del   menu  _     _
@@ -94,9 +100,9 @@
 (deflayer function
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @ly_qw @ly_dh _   ssrq  _     f12   f7    f8    f9    @v+   _     _
-  _        @la_s lmet  @ls_s @lc_s @ra_s f11   f4    f5    f6    @v-   _     _     _
-  _     _     S-@cut S-@cpy S-tab S-@pst _ f10 f1    f2    f3    @v0   _
+  _        _     _     _     ssrq  _     f12   f7    f8    f9   @ly_qw _     _
+  _        @la_s lmet  @ls_s @lc_s @ra_s f11   f4    f5    f6   @ly_dh _     _     _
+  _     _     S-@cut S-@cpy S-tab S-@pst _  f10   f1    f2    f3    _     _  
   _          _    _                   _                 _     _     _     _
 )
 
@@ -105,16 +111,16 @@
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
   _        S-1   S-2   S-3   S-4   S-5   =     7     8     9     +     «     »
   _        ;     :     {     \(    [     *     4     5     6     -     _     _     _
-  _     S-6   S-7   }     \)    ]     `     0     1     2     3    /     _
-  _           _     @fun             @sym2             _     _     _    _
+  _     S-6   S-7   }     \)    ]     `     0     1     2     3     /     _
+  _           _     @fun             @sym2              _     _     _     _
 )
 
 (deflayer symbols2
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        ¡     €     …     ¢     ½     ≠     ∞     @dum  №     ±     _     _
-  _        \\    S-\\  §     ™     ®     ×     ←     @d'   →     \_    _     _     _
-  _     `     S-`   ©     nubs S-nubs S-`   °     •     _     _     ÷     _
+  _        @v0   @v-   @v+   @mns  @mps  ≠     ∞     @dum  №     ±     _     _
+  _        `     S-`   \\    S-\\  @mst  ×     ←     @d'   →     \_    _     _     _
+  _     nubs S-nubs ©     @mpl  @mpp  S-`   °     •     _     _     ÷     _
   _           _     _                 _                 _     _     _     _
 )
 

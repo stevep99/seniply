@@ -18,6 +18,12 @@ In this folder are _KMonad_ configuration files for the Colemak-DH Seniply layou
 
 In this folder is a _Chrysalis_ configuration for Colemak-DH Seniply. NB Dead keys and compose strings are not yet supported.
 
+<a href="https://github.com/stevep99/seniply/tree/master/downloads/qmk/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;QMK files</a>
+
+[QMK](https://qmk.fm/) is a keyboard firmware with support for a huge number of devices.
+
+In this folder is a _QMK_ keymap json file for a USB-USB converter device. NB Dead keys and compose strings are not yet supported.
+
 <a href="https://github.com/stevep99/BigBagKbdTrixXKB"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;XKB files</a>
 
 SteveP's fork of DreymaR's big bag for XKB has a mostly-complete implementation of Seniply.

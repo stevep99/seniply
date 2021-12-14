@@ -1,8 +1,7 @@
 (defcfg
   ;; ** For Linux **
-  ;;input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
-  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
-  ;; input  (device-file "/dev/input/by-id/usb-Matias_Ergo_Pro_Keyboard-event-kbd")
+  input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
+  ;; input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
   output (uinput-sink "KMonad seniply-iso-wide")
   cmp-seq cmp
 
@@ -59,14 +58,20 @@
   v+ VolumeUp
   v- VolumeDown 
   v0 Mute
-  d' #(cmp ')
-  dum #(cmp @)
   mpl play
   mps previoussong
   mns nextsong
   mrw rewind
   mpp pause
-  mst stop  
+  mst stop
+  b+ BrightnessUp
+  b- BrightnessDown
+  d' #(cmp ')
+  dum #(cmp @)
+  ra1 (around ralt 1)
+  ra2 (around ralt 2)
+  ra3 (around ralt 3)
+  ra4 (around ralt 4)
 )
 
 (deflayer colemak-dh-sp
@@ -109,18 +114,18 @@
 (deflayer symbols1
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        S-1   S-2   S-3   S-4   S-5   «     =     7     8     9     +     _
-  _        ;     :     {     \(    [     »     *     4     5     6     -     _     _
-  _     S-6   S-7   }     \)    ]     `     _     0     1     2     3    /
+  _        S-1   S-2   ;     :     \_    «     =     7     8     9     +     _
+  _        \\    S-\\  {     \(    [     »     *     4     5     6     -     _     _
+  _     nubs   S-nubs }   \)    ]     `     _     0     1     2     3    /
   _           _     @fun             @sym2             _     _     _    _
 )
 
 (deflayer symbols2
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @v0   @v-   @v+   @mns  @mps  _     ≠     ∞     @dum  №     ±     _
-  _        `     S-`   \\    S-\\  @mst  _     ×     ←     @d'   →     \_    _     _
-  _     nubs S-nubs ©     @mpl  @mpp  S-`   _     °     •     _     _     ÷
+  _        @ra1  @ra2  @ra3  @ra4  @b+   _     ≠     S-7   `     S-`   ±     _
+  _        @v0   @v-   @mpp  @v+   @b-   _     ×     S-4   S-5   S-6   \_    _     _
+  _     _     @mps  @mst  @mns  _     _     _     °     S-1   S-2   S-3   ÷
   _           _     _                 _                 _     _     _     _
 )
 

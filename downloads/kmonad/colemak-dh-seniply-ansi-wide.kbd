@@ -104,9 +104,9 @@
 (deflayer function
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        _     _     S-@fnd ssrq _     _     f12   f7    f8    f9   @ly_qw _     _
-  _        @la_s lmet  @ls_s @lc_s @ra_s _     f11   f4    f5    f6   @ly_dh _
-  _           S-@cut S-@cpy S-tab S-@pst _   _    f10   f1    f2    f3    _ 
+  _        @ly_qw @ly_dh S-@fnd ssrq _   _     f12   f7    f8    f9    C-+   _     _
+  _        @la_s lmet  @ls_s @lc_s @ra_s _     f11   f4    f5    f6    C--   _
+  _           S-@cut S-@cpy S-tab S-@pst _   _    f10   f1    f2    f3    C-0
   _          _    _                   _                 _     _     _     _
 )
 

@@ -132,7 +132,7 @@ function closeModalImage() {
 
 <ul>
   <li>Low travel distance by keeping fingers near their home positions; movements larger that 1 key-unit are avoided.</li>
-  <li>Well positioned thumb-keys are used to access layers - six layers are supported - with no need for dual-role keys.</li>
+  <li>Well positioned thumb-keys are used to access layers - six layers are supported - with no need for dual-role (mod-tap) keys.</li>
   <li>Sticky (one-shot) modifiers are used to fully support Ctrl, Alt, etc, without the need for dedicated keys. No more modifiers in awkward corners of the keyboard.</li>
   <li>Layer mappings designed to be intuitive and easy-to-learn.</li>
   <li>Easily adjustable and expandable to meet user requirements (e.g. to support multilingual typing).</li>
@@ -173,7 +173,7 @@ function closeModalImage() {
   <figcaption>The Seniply Function layer, activated by pressing two-thumb keys.</figcaption>
 </figure>
 
-<p>To accomodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. The function keys are on the right-hand side, following a familiar Numpad-like convention for ease of learning. As with the Extend layer, home-row modifiers are available to combine with function keys. The function layer also provides a mechanism to switch between layouts (e.g. to switch to Qwerty for gaming) via the @L1, @L2, @L3 mappings. To access the function layer, the two outmost thumb-keys are held down. Alternatively, on keyboards with good support for multiple thumb keys, you may assign an unused thumb key for selecting this layer.</p>
+<p>To accommodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. This is accessed by holding down the two outermost thumb-keys, or, on keyboards with support for additional thumb keys, you may prefer to use a spare single thumb key. The function keys are mapped on the right-hand side, following a familiar Numpad-like convention for ease of learning. Mappings are also provided for browser zoom controls (Ctrl-plus/minus). As with the Extend layer, home-row modifiers are available to combine with function keys. The function layer also provides a mechanism to switch between layouts (e.g. to switch to Qwerty for gaming) via the @L1 and @L2 mappings.</p>
 
 <p>Examples:<br/>
 (i) Output F11 using <code>Ext-Sym-m</code><br/>
@@ -241,7 +241,7 @@ function closeModalImage() {
 <p>The Symbols2 layer has the remaining standard symbols found on keyboards, including those normally output via shifted number keys. For easy recall, the symbols corresponding to Shift+1-7
 are assigned to match their number key in the Symbols1 layer. Noting that characters such as <code>* ( )</code> were assigned in the Symbols1 layer, the remaining vacant positions on the right-hand side are assigned to characters such as <code>`</code>, plus a selection of less common characters.</p> 
 
-<p>On the left-hand side, the Symbols2 layer provides media keys, together with volume and screen brightness functions. The remaining keys on the top row are currently occupied by additional symbols normally typed using AltGr, and may depend on your OS's language setting. These could be substituted according to user preference.</p>
+<p>On the left-hand side, the Symbols2 layer provides media keys, together with volume and screen brightness functions. The remaining keys on the top row are currently occupied by additional symbols normally typed using AltGr, and may depend on your OS's language setting. These could be substituted according to user preference. On keyboards with multiple thumb keys, you may prefer to assign the Symbols2 layer to a single key.</p>
 
 <p>Extra care is needed when assigning unicode characters to keys that are not usually defined in your operating system's keymap. For these to be printed correctly, the OS must translate a sequence of keycodes  to printable characters, for example using <a href="https://en.wikipedia.org/wiki/Compose_key">Compose</a>. In operating systems that don't support Compose natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows. One further note regarding symbols, it is possible to type any of the symbols that would normally be made available via the AltGr key, where configured. For example, if AltGr-a usually produces <code>æ</code> on your system, you can reproduce this with <code>Ext-G&nbsp;a</code>. Using this technique can substantially increase the number of symbols that are available for you to type using keys right under your fingertips!</p>
 

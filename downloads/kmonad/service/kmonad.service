@@ -6,7 +6,7 @@ Description=KMonad service
 [Service]
 Type=oneshot
 WorkingDirectory=/home/steve/Projects/keyboard/seniply/downloads/kmonad
-ExecStart=/home/steve/bin/kmonad colemak-dh-seniply-iso-wide.kbd
+ExecStart=/home/steve/bin/kmonad colemak-dh-seniply-wide.kbd
 
 [Install]
 WantedBy=default.target

@@ -95,12 +95,12 @@ function closeModalImage() {
 
 
 
-<figure id="seniply_matrix_all_us">
+<figure id="seniply_us_matrix_all">
   <img onclick="showModalImage(this)" src="gfx/seniply_us_matrix_all.png" alt="Colemak-DH Seniply (US) for a small matrix keyboard"/>
   <figcaption>Colemak-DH Seniply for a matrix-like keyboard with 34 keys assuming underlying US keyboard mapping.</figcaption>
 </figure>
 
-<figure id="seniply_matrix_all_uk">
+<figure id="seniply_uk_matrix_all">
   <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_all.png" alt="Colemak-DH Seniply (UK) for a small matrix keyboard"/>
   <figcaption>Colemak-DH Seniply for a matrix-like keyboard with 34 keys assuming underlying UK keyboard mapping.</figcaption>
 </figure>
@@ -111,8 +111,8 @@ function closeModalImage() {
 </div>
 <script>
   function showSeniplyMatrixAll(visibleId) {
-    var panel1 = document.getElementById('seniply_matrix_all_us');
-    var panel2 = document.getElementById('seniply_matrix_all_uk');
+    var panel1 = document.getElementById('seniply_us_matrix_all');
+    var panel2 = document.getElementById('seniply_uk_matrix_all');
     if (visibleId == 1) {
       panel1.style.display = "block";
       panel2.style.display = "none";
@@ -132,7 +132,7 @@ function closeModalImage() {
 
 <ul>
   <li>Low travel distance by keeping fingers near their home positions; movements larger that 1 key-unit are avoided.</li>
-  <li>Well positioned thumb-keys are used to access layers - six layers are supported - with no need for dual-role (mod-tap) keys.</li>
+  <li>Well positioned thumb-keys are used to access layers - six layers are supported - with no need for dual-role (i.e. <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/mod_tap.md"><i>mod-tap</i></a>) keys.</li>
   <li>Sticky (one-shot) modifiers are used to fully support Ctrl, Alt, etc, without the need for dedicated keys. No more modifiers in awkward corners of the keyboard.</li>
   <li>Layer mappings designed to be intuitive and easy-to-learn.</li>
   <li>Easily adjustable and expandable to meet user requirements (e.g. to support multilingual typing).</li>
@@ -143,23 +143,23 @@ function closeModalImage() {
 
 <h4>Base Layer</h4>
 
-<figure id="seniply_matrix_base">
-  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_base.png" alt="Seniply base layer"/>
+<figure id="seniply_uk_matrix_base">
+  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_base.png" alt="Seniply base layer"/>
   <figcaption>The Seniply base layer, using Colemak-DH.</figcaption>
 </figure>
 
-<p>The base alpha layer is <a href="https://colemakmods.github.io/mod-dh/">Colemak-DH</a>, modified slightly so that apostrophe is moved to the semicolon location. Being the more frequent character, apostrophe is more deserving on a spot on the base layer when using a minimalist layout. (Semicolon and colon are still easy to access on a symbols layer). The second layer is the standard Shift layer, and is selected by holding down the inner-left thumb key. The space bar is mapped to the inner-right thumb key.</p>
+<p>The base alpha layer is <a href="https://colemakmods.github.io/mod-dh/">Colemak-DH</a>, modified slightly so that apostrophe is moved to the semicolon location. Being the more frequent character, apostrophe is more deserving on a spot on the base layer when using a minimalist layout. (Semicolon and colon are still easy to access on a symbols layer). The spacebar is mapped to the inner-right thumb key. The second layer is the standard Shift layer, and is selected by holding down the inner-left thumb key.</p>
 
 <h4>Extend Layer</h4>
 
-<figure id="seniply_matrix_extend">
-  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_extend.png" alt="Seniply Extend layer"/>
+<figure id="seniply_uk_matrix_extend">
+  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_extend.png" alt="Seniply Extend layer"/>
   <figcaption>The Seniply Extend layer, activated with a left-thumb key.<br/>Key: <code>⇧</code>&nbsp;Shift, <code>⎈</code>&nbsp;Ctrl, <code>⎇</code>&nbsp;Alt, <code>RA</code>&nbsp;AltGr</code>, <code>⇪</code>&nbsp;Caps, <code>⇥</code>&nbsp;Tab, <code>⇱ ⇲</code>&nbsp; Home/End, <code>⇞ ⇟</code>&nbsp;Page&nbsp;up/down.</figcaption>
 </figure>
 
-<p>Navigation and other non-printable functions are provided by the Extend layer, which is heavily based on <a href="https://dreymar.colemak.org/layers-extend.html">DreymaR's original</a>. The Extend layer is selected via the left-most thumb key. This layer provides navigation, page up/down, home/end on the right hand side, and backspace is assigned to a comfortable spot on a strong index finger (Ext-H).</p>
+<p>Navigation and other non-printable functions are provided by the Extend layer, which is heavily based on <a href="https://dreymar.colemak.org/layers-extend.html">DreymaR's original</a>. The Extend layer is selected via the left-most thumb key. This layer provides navigation, page up/down, home/end on the right-hand side. Backspace <code>⌫</code> is assigned to a comfortable spot on a strong index finger (Ext-H), with Delete <code>⌦</code> also well positioned on the home-row (Ext-O).</p>
 
-<p>On the left-hand side are home-row modifiers for Alt, Super, Shift, Control and AltGr on A,R,S,T,G respectively. As with DreymaR's Extend, these modifiers can be held down and combined with other Extend functions such as arrows etc, to comfortably produce combinations like <code>Ctrl&nbsp;⌫</code>, <code>Alt&nbsp;←</code>. Importantly though, these home-row modifiers are also implemented as one-shot (sticky) keys, which makes it easy to do Control and Alt shortcuts without needing dedicated modifier keys.</p>
+<p>On the left-hand side are home-row modifiers for Alt, Super, Shift, Control and AltGr on A,R,S,T,G respectively. As with DreymaR's Extend, these modifiers can be held down and combined with other Extend functions such as arrows etc, to comfortably produce combinations like <code>Ctrl&nbsp;⌫</code>, <code>Alt&nbsp;←</code>. Importantly though, these home-row modifiers are also implemented as one-shot (sticky) keys, which makes it easy to do Control and Alt shortcuts without needing dedicated modifier keys. Commonly used operations like Cut, Copy, Paste and Undo have dedicated shortcuts in this layer too.</p>
 
 <p>Examples:<br/>
 (i) Output Ctrl-A using <code>Ext-t&nbsp;a</code><br/>
@@ -168,12 +168,12 @@ function closeModalImage() {
 
 <h4>Function Layer</h4>
 
-<figure id="seniply_matrix_function">
-  <img onclick="showModalImage(this)" src="gfx/seniply_matrix_function.png" alt="Seniply Function layer"/>
+<figure id="seniply_uk_matrix_function">
+  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_function.png" alt="Seniply Function layer"/>
   <figcaption>The Seniply Function layer, activated by pressing two-thumb keys.</figcaption>
 </figure>
 
-<p>To accommodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. This is accessed by holding down the two outermost thumb-keys, or, on keyboards with support for additional thumb keys, you may prefer to use a spare single thumb key. The function keys are mapped on the right-hand side, following a familiar Numpad-like convention for ease of learning. Mappings are also provided for browser zoom controls (Ctrl-plus/minus). As with the Extend layer, home-row modifiers are available to combine with function keys. The function layer also provides a mechanism to switch between layouts (e.g. to switch to Qwerty for gaming) via the @L1 and @L2 mappings.</p>
+<p>To accommodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. This is accessed by holding down the two outermost thumb-keys, or, on keyboards with support for additional thumb keys, you may prefer to map it to a spare single key. The function keys are mapped on the right-hand side, following a familiar Numpad-like convention for ease of learning. As with the Extend layer, home-row modifiers are available to combine with function keys. Mappings are also provided for browser zoom (Ctrl-plus/minus), screen brightness, plus media and volume controls.</p>
 
 <p>Examples:<br/>
 (i) Output F11 using <code>Ext-Sym-m</code><br/>
@@ -209,7 +209,7 @@ function closeModalImage() {
   showSeniplyMatrixSymbols1(1);
 </script>
 
-  <p>Additional symbols are provided by Symbols1 and Symbols2 layers. The Symbols1 layer has the most frequent symbols and is activated by holding the right-most thumb key. Numbers and basic mathematical symbols are on the right-hand side, arranged in NumPad style for convenience. The most common remaining symbols, such as brackets, backslash, colon and semicolon, are on the left-hand side. Note also that each Bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since opening and closing brackets are not usually typed together. In fact the opening bracket is often more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
+  <p>Additional symbols are provided by Symbols1 and Symbols2 layers. The Symbols1 layer has the most frequent symbols and is activated by holding the right-most thumb key. Numbers and basic mathematical symbols are on the right-hand side, arranged in Numpad style for convenience. The most common remaining symbols, such as brackets, backslash, colon and semicolon, are on the left-hand side. Note also that each Bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since opening and closing brackets are not usually typed together. In fact the opening bracket is often more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
 
 <figure id="seniply_us_matrix_symbols2">
   <img onclick="showModalImage(this)" src="gfx/seniply_us_matrix_symbols2.png" alt="Seniply Sym2 layer"/>
@@ -239,11 +239,11 @@ function closeModalImage() {
 </script>
 
 <p>The Symbols2 layer has the remaining standard symbols found on keyboards, including those normally output via shifted number keys. For easy recall, the symbols corresponding to Shift+1-7
-are assigned to match their number key in the Symbols1 layer. Noting that characters such as <code>* ( )</code> were assigned in the Symbols1 layer, the remaining vacant positions on the right-hand side are assigned to characters such as <code>`</code>, plus a selection of less common characters.</p> 
+are assigned to the corresponding number key in the Symbols1 layer (note, the characters <code><nobr>* ( )</nobr></code> have been already assigned). The remaining vacant positions on the right-hand side are assigned to characters such as <code>`</code>, <code>_</code>, and a selection of less common characters. The left-hand side provides mouse button and movement keys where supported - alternatively these could be substituted for custom characters or macros according to user preference. On keyboards with multiple thumb keys, you may prefer to assign Symbols2 activation to a single key.</p>
 
-<p>On the left-hand side, the Symbols2 layer provides media keys, together with volume and screen brightness functions. The remaining keys on the top row are currently occupied by additional symbols normally typed using AltGr, and may depend on your OS's language setting. These could be substituted according to user preference. On keyboards with multiple thumb keys, you may prefer to assign the Symbols2 layer to a single key.</p>
+<p>Extra care is needed when assigning unicode characters to keys that are not usually defined in your operating system's keymap. For these to be printed correctly, the OS must translate a sequence of keycodes to printable characters, for example using <a href="https://en.wikipedia.org/wiki/Compose_key">Compose</a>. On Linux, the "Menu" key <code>☰</code> is often defined as Compose. In operating systems that don't support Compose natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows.</p>
 
-<p>Extra care is needed when assigning unicode characters to keys that are not usually defined in your operating system's keymap. For these to be printed correctly, the OS must translate a sequence of keycodes  to printable characters, for example using <a href="https://en.wikipedia.org/wiki/Compose_key">Compose</a>. In operating systems that don't support Compose natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows. One further note regarding symbols, it is possible to type any of the symbols that would normally be made available via the AltGr key, where configured. For example, if AltGr-a usually produces <code>æ</code> on your system, you can reproduce this with <code>Ext-G&nbsp;a</code>. Using this technique can substantially increase the number of symbols that are available for you to type using keys right under your fingertips!</p>
+<p>A further note regarding symbols: is possible to type any of the symbols that would normally be made available via the AltGr key, where configured on your system. For example, if AltGr-a usually produces <code>æ</code> on your system, you can reproduce this with <code>Ext-G&nbsp;a</code>. Using this technique substantially increases the number of symbols that are available just using keys right under your fingertips!</p>
 
 <a name="hardware"><h3>Hardware</h3></a>
 
@@ -254,9 +254,9 @@ are assigned to match their number key in the Symbols1 layer. Noting that charac
 	<li>Traditional staggered keyboards that are physically split or have split spacebar, such as <a href="https://matias.ca/ergopro/pc/">Ergo Pro</a>, <a href="https://ultimatehackingkeyboard.com/">UHK</a>, <a href="https://dygma.com/products/dygma-raise">Dygma Raise</a>, <a href="https://www.mistelkeyboard.com/products/d11cf7a73da49468e2a530b4cf18e76c">Mistel Barocco</a>, or similar.</li>
 </ul>
 
-<p>It is also works satisfactorily on traditional staggered keyboards with smaller (at most 5u wide) spacebar, such as is typically found on laptops. On these keyboards the <a href="https://colemakmods.github.io/ergonomic-mods/wide.html">Wide Mod</a> is required.</p>
+<p>It is also works satisfactorily on traditional staggered keyboards with smaller (at most 5u wide) spacebar, as is typically found on laptops. On these keyboards the <a href="https://colemakmods.github.io/ergonomic-mods/wide.html">Wide Mod</a> is required.</p>
 
-<p>Other keyboards, especially those with a large spacebars, are not suitable for Seniply's thumb-based layer selection system. But you may adapt it somewhat by using other keys, such as CapsLock and Enter, as viable alternative layer selection keys.</p>
+<p>Other keyboards, especially those with a large spacebars, are not suitable for Seniply's thumb-based layer selection system. But you may adapt it somewhat by using other keys, e.g. CapsLock and Enter, as viable alternative layer selection keys.</p>
 
 <a name="traditional-keyboards"><h5>Traditional Keyboard mappings</h5></a>
 
@@ -265,28 +265,28 @@ Support is included for traditional keyboards, via the KMonad-based implementati
 <div class="slideshow-container">
 
 <div class="slide fade">
-<figure id="seniply_iso_split_all_uk">
+<figure id="seniply_uk_iso_split_all">
   <img onclick="showModalImage(this)" src="gfx/seniply_uk_iso_split_all.png" alt="Colemak-DH Seniply (UK) for a split ISO keyboard"/>
   <figcaption>Colemak-DH Seniply for a split ISO keyboard with UK mappings.<br/>Keys that are not required are greyed out.</figcaption>
 </figure>
 </div>
 
 <div class="slide fade" style="display:none">
-<figure id="seniply_ansi_split_all_us">
+<figure id="seniply_us_ansi_split_all">
   <img onclick="showModalImage(this)" src="gfx/seniply_us_ansi_split_all.png" alt="Colemak-DH Seniply (US) for a split ANSI keyboard"/>
   <figcaption>Colemak-DH Seniply for a split ANSI keyboard with US mappings.<br/>Keys that are not required are greyed out.</figcaption>
 </figure>
 </div>
 
 <div class="slide fade" style="display:none">
-<figure id="seniply_ansi_wide_all_us">
+<figure id="seniply_us_ansi_wide_all">
   <img onclick="showModalImage(this)" src="gfx/seniply_us_ansi_wide_all.png" alt="Colemak-DH Seniply (US) for a split ANSI keyboard"/>
   <figcaption>Colemak-DH Seniply for a traditional ANSI keyboard with US mappings, using the Wide Mod.<br/>Keys that are not required are greyed out.</figcaption>
 </figure>
 </div>
 
 <div class="slide fade" style="display:none">
-<figure id="seniply_iso_wide_all_uk">
+<figure id="seniply_uk_iso_wide_all">
   <img onclick="showModalImage(this)" src="gfx/seniply_uk_iso_wide_all.png" alt="Colemak-DH Seniply (UK) for a split ISO keyboard"/>
   <figcaption>Colemak-DH Seniply for a traditional ISO keyboard with UK mappings, using the Wide Mod.<br/>Keys that are not required are greyed out.</figcaption>
 </figure>

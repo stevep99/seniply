@@ -10,7 +10,7 @@ Curently available implementations:
 
 [KMonad](https://github.com/kmonad/kmonad) is a keyboard mapping tool that supports a wide variety of advanced keyboard functionality, by remapping the low-level USB input scancodes from the keyboard. This allows full support on non-programmable keyboards. 
 
-In this folder are _KMonad_ configuration files for the Colemak-DH Seniply layout. Provided are mapping files for ANSI and ISO keyboards, both split and non-split varieties. 
+In this folder are _KMonad_ configuration files for the Colemak-DH Seniply layout. Provided are mapping files for both split and non-split keyboards. 
 
 <a href="https://github.com/stevep99/seniply/tree/master/downloads/chrysalis/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;Chrysalis files</a>
 

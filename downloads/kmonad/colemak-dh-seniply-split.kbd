@@ -42,6 +42,7 @@
   lc_s (sticky-key 1500 lctl)
   la_s (sticky-key 1500 lalt)
   ra_s (sticky-key 1500 ralt)
+  lm_s (sticky-key 1500 lmet)
   lsc_s (around @lc_s @ls_s)
   lac_s (around @lc_s @la_s)
 )
@@ -101,8 +102,8 @@
   _        @mpl  @mrw  @mps  @mns ejectcd refresh brdn brup www mail   prog1 prog2
   _        f1    f2    f3    f4    f5    f6    f7    f8    f9   f10    f11   f12   ret
   _        esc   @bk   @fnd  @fw   ins   pgup  home  up    end   caps  ssrq  slck
-  _        @la_s lmet  @ls_s @lc_s @ra_s pgdn  lft   down  rght  del   menu  _     _
-  _     @udo  @cut  @cpy  tab   @pst  @udo  ssrq  bks   @ls_s  cmp  ret   _
+  _        @la_s @lm_s @ls_s @lc_s @ra_s pgdn  lft   down  rght  del   menu  _     _
+  _     @udo  @cut  @cpy  lmet  @pst  @udo  ssrq  bks   tab    cmp  ret   _
   _            _    _                 @sym2             @fun  _     _     _
 )
 
@@ -110,7 +111,7 @@
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
   _        @v0   @v-   @mpp  @v+   @b-   f12   f7    f8    f9    C-+   _     _
-  _        @la_s lmet  @ls_s @lc_s @b+   f11   f4    f5    f6    C--   _     _     _
+  _        @la_s @lm_s @ls_s @lc_s @b+   f11   f4    f5    f6    C--   _     _     _
   _     _     @mps  @mst  @mns  _     _     f10   f1    f2    f3    C-0   _  
   _          _    _                   _                 _     _     _     _
 )

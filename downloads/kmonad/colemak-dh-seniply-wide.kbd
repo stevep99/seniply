@@ -1,7 +1,7 @@
 (defcfg
   ;; ** For Linux **
   input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
-  ;; input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  ;;input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
   output (uinput-sink "KMonad seniply-iso-wide")
   cmp-seq cmp
 
@@ -51,6 +51,9 @@
   cpy C-c
   pst C-v
   cut C-x
+  scpy C-S-c
+  spst C-S-v
+  scut C-S-x
   udo C-z
   all C-a
   fnd C-f
@@ -110,10 +113,10 @@
 (deflayer function
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @v0   @v-   @mpp  @v+   @b-   _     f12   f7    f8    f9    C-+   _
+  _        @mst  @mps  @mpp  @mns  @b-   _     f12   f7    f8    f9    C-+   _
   _        @la_s @lm_s @ls_s @lc_s @b+   _     f11   f4    f5    f6    C--   _     _
-  _     _     @mps  @mst  @mns  _     _     _     f10   f1    f2    f3    C-0
-  _          _    _                   _                 _     _     _     _
+  _     @v0   @v-   @scpy @v+   @spst _     _     f10   f1    f2    f3    C-0
+  _           _     _                 _                 _     _     _     _
 )
 
 (deflayer symbols1

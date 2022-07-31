@@ -21,7 +21,7 @@
   grv      1     2     3     4     5     6     7     8     9     0     -     =     bspc
   tab      q     w     e     r     t     y     u     i     o     p     [     ]
   caps     a     s     d     f     g     h     j     k     l     ;     '     \     ret
-  lsft  102d  z     x     c     v     b     n     m     ,     .     /     rsft
+  lsft  nubs  z     x     c     v     b     n     m     ,     .     /     rsft
   lctl        lmet  lalt              spc               ralt  rmet  cmp   rctl
 )
 
@@ -51,6 +51,9 @@
   cpy C-c
   pst C-v
   cut C-x
+  scpy C-S-c
+  spst C-S-v
+  scut C-S-x
   udo C-z
   all C-a
   fnd C-f
@@ -66,7 +69,7 @@
   mpp pause
   mst stop
   b+ BrightnessUp
-  b- BrightnessDown  
+  b- BrightnessDown
   ra1 (around ralt 1)
   ra2 (around ralt 2)
   ra3 (around ralt 3)
@@ -110,10 +113,10 @@
 (deflayer function
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @v0   @v-   @mpp  @v+   @b-   f12   f7    f8    f9    C-+   _     _
+  _        @mst  @mps  @mpp  @mns  @b-   f12   f7    f8    f9    C-+   _     _
   _        @la_s @lm_s @ls_s @lc_s @b+   f11   f4    f5    f6    C--   _     _     _
-  _     _     @mps  @mst  @mns  _     _     f10   f1    f2    f3    C-0   _  
-  _          _    _                   _                 _     _     _     _
+  _     @v0   @v-   @scpy @v+   @spst _     f10   f1    f2    f3    C-0   _  
+  _           _     _                 _                 _     _     _     _
 )
 
 (deflayer symbols1

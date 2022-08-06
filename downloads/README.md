@@ -12,17 +12,17 @@ Curently available implementations:
 
 In this folder are _KMonad_ configuration files for the Colemak-DH Seniply layout. Provided are mapping files for both split and non-split keyboards. 
 
-<a href="https://github.com/stevep99/seniply/tree/master/downloads/chrysalis/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;Chrysalis files</a>
+<a href="https://github.com/stevep99/seniply/tree/master/downloads/qmk/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;QMK files</a>
 
 [QMK](https://qmk.fm/) is a keyboard firmware with support for a huge number of devices.
 
 In this folder is a _QMK_ keymap json file for (i) a Redox keyboard and (ii) a USB-USB converter device. NB Dead keys and compose strings are not yet supported.
 
+<a href="https://github.com/stevep99/seniply/tree/master/downloads/chrysalis/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;Chrysalis files</a>
+
 [Chrysalis](https://github.com/keyboardio/Chrysalis) is a graphical configurator for Kaleidoscope-powered keyboards, such as the Keyboardio Atreus. 
 
 In this folder is a _Chrysalis_ configuration for Colemak-DH Seniply. NB Dead keys and compose strings are not yet supported.
-
-<a href="https://github.com/stevep99/seniply/tree/master/downloads/qmk/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;QMK files</a>
 
 <a href="https://github.com/stevep99/BigBagKbdTrixXKB"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;XKB files</a>
 

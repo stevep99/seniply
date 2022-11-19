@@ -142,12 +142,17 @@
         "baseCode": 32
       },
       {
-        "code": 2099,
-        "label": {"hint": null, "base": ":"},
+        "code": 2081,
+        "label": {"hint": null, "base": "$"},
         "categories": ["with-modifiers", "shift"],
-        "baseCode": 51
+        "baseCode": 33
       },
-      {"code": 51, "label": {"base": ";", "shifted": ":"}},
+      {
+        "code": 2082,
+        "label": {"hint": null, "base": "%"},
+        "categories": ["with-modifiers", "shift"],
+        "baseCode": 34
+      },
       {
         "code": 0,
         "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
@@ -168,19 +173,12 @@
         "categories": ["with-modifiers", "shift"],
         "baseCode": 46
       },
+      {"code": 51, "label": {"base": ";", "shifted": ":"}},
       {
-        "code": 50,
-        "label": {
-          "hint": {"full": "Alternate", "1u": "Alt."},
-          "base": "#",
-          "shifted": "~"
-        }
-      },
-      {
-        "code": 2098,
-        "label": {"hint": null, "base": "~"},
+        "code": 2099,
+        "label": {"hint": null, "base": ":"},
         "categories": ["with-modifiers", "shift"],
-        "baseCode": 50
+        "baseCode": 51
       },
       {
         "code": 2095,
@@ -216,18 +214,16 @@
       {"code": 35, "label": {"base": "6", "shifted": "^"}},
       {"code": 45, "label": {"base": "-", "shifted": "_"}},
       {
-        "code": 100,
-        "label": {
-          "hint": {"full": "Alternate", "1u": "Alt."},
-          "base": "\\",
-          "shifted": "|"
-        }
+        "code": 2083,
+        "label": {"hint": null, "base": "^"},
+        "categories": ["with-modifiers", "shift"],
+        "baseCode": 35
       },
       {
-        "code": 2148,
-        "label": {"hint": null, "base": "|"},
+        "code": 2084,
+        "label": {"hint": null, "base": "&"},
         "categories": ["with-modifiers", "shift"],
-        "baseCode": 100
+        "baseCode": 36
       },
       {
         "code": 2096,
@@ -642,9 +638,12 @@
         "categories": ["consumer"]
       },
       {
-        "code": 18614,
-        "legacyCode": 22710,
-        "label": {"base": {"full": "Previous track", "1u": "⏮"}},
+        "code": 18666,
+        "legacyCode": 23786,
+        "label": {
+          "hint": {"full": "Volume", "1u": "Vol."},
+          "base": {"full": "Down", "1u": "🔉"}
+        },
         "categories": ["consumer"]
       },
       {
@@ -654,9 +653,12 @@
         "baseCode": 6
       },
       {
-        "code": 18613,
-        "legacyCode": 22709,
-        "label": {"base": {"full": "Next track", "1u": "⏭"}},
+        "code": 18665,
+        "legacyCode": 23785,
+        "label": {
+          "hint": {"full": "Volume", "1u": "Vol."},
+          "base": {"full": "Up", "1u": "🔊"}
+        },
         "categories": ["consumer"]
       },
       {
@@ -744,9 +746,49 @@
     ],
     [
       {
-        "code": 0,
-        "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
+        "code": 1054,
+        "label": {"hint": {"full": "AltGr+", "1u": "AGr+"}, "base": "1"},
+        "categories": ["with-modifiers", "altgr"],
+        "baseCode": 30
+      },
+      {
+        "code": 1055,
+        "label": {"hint": {"full": "AltGr+", "1u": "AGr+"}, "base": "2"},
+        "categories": ["with-modifiers", "altgr"],
+        "baseCode": 31
+      },
+      {
+        "code": 1056,
+        "label": {"hint": {"full": "AltGr+", "1u": "AGr+"}, "base": "3"},
+        "categories": ["with-modifiers", "altgr"],
+        "baseCode": 32
+      },
+      {
+        "code": 1057,
+        "label": {"hint": {"full": "AltGr+", "1u": "AGr+"}, "base": "4"},
+        "categories": ["with-modifiers", "altgr"],
+        "baseCode": 33
+      },
+      {
+        "code": 1058,
+        "label": {"hint": {"full": "AltGr+", "1u": "AGr+"}, "base": "5"},
+        "categories": ["with-modifiers", "altgr"],
+        "baseCode": 34
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
         "categories": ["blanks"]
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
+      },
+      {
+        "code": 20497,
+        "label": {"hint": {"full": "Mouse Wheel", "1u": "M.Whl"}, "base": "Up"},
+        "categories": ["mousekeys"]
       },
       {
         "code": 20545,
@@ -770,48 +812,54 @@
         "categories": ["mousekeys"]
       },
       {
-        "code": 20497,
-        "label": {"hint": {"full": "Mouse Wheel", "1u": "M.Whl"}, "base": "Up"},
-        "categories": ["mousekeys"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 0,
-        "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 2084,
-        "label": {"hint": null, "base": "&"},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 36
-      },
-      {"code": 53, "label": {"base": "`", "shifted": "¬"}},
-      {
-        "code": 2101,
-        "label": {"hint": null, "base": "¬"},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 53
-      },
-      {
         "code": 53597,
         "label": {"hint": {"full": "Dynamic Macro", "1u": "DM"}, "base": "#1"},
         "rangeStart": 53596,
         "categories": ["dynmacros"]
       },
       {
+        "code": 100,
+        "label": {
+          "hint": {"full": "Alternate", "1u": "Alt."},
+          "base": "\\",
+          "shifted": "|"
+        }
+      },
+      {
+        "code": 2148,
+        "label": {"hint": null, "base": "|"},
+        "categories": ["with-modifiers", "shift"],
+        "baseCode": 100
+      },
+      {"code": 49, "label": {"base": "#", "shifted": "~"}},
+      {
+        "code": 2097,
+        "label": {"hint": null, "base": "~"},
+        "categories": ["with-modifiers", "shift"],
+        "baseCode": 49
+      },
+      {
         "code": 0,
         "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
         "categories": ["blanks"]
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
+      },
+      {
+        "code": 20498,
+        "label": {
+          "hint": {"full": "Mouse Wheel", "1u": "M.Whl"},
+          "base": "Down"
+        },
+        "categories": ["mousekeys"]
       },
       {
         "code": 20484,
@@ -829,45 +877,23 @@
         "categories": ["mousekeys"]
       },
       {
-        "code": 20498,
-        "label": {
-          "hint": {"full": "Mouse Wheel", "1u": "M.Whl"},
-          "base": "Down"
-        },
-        "categories": ["mousekeys"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 0,
-        "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 2081,
-        "label": {"hint": null, "base": "$"},
+        "code": 2093,
+        "label": {"hint": null, "base": "_"},
         "categories": ["with-modifiers", "shift"],
-        "baseCode": 33
+        "baseCode": 45
+      },
+      {"code": 53, "label": {"base": "`", "shifted": "¬"}},
+      {
+        "code": 2101,
+        "label": {"hint": null, "base": "¬"},
+        "categories": ["with-modifiers", "shift"],
+        "baseCode": 53
       },
       {
-        "code": 2082,
-        "label": {"hint": null, "base": "%"},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 34
-      },
-      {
-        "code": 2083,
-        "label": {"hint": null, "base": "^"},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 35
+        "code": 1030,
+        "label": {"hint": {"full": "AltGr+", "1u": "AGr+"}, "base": "c"},
+        "categories": ["with-modifiers", "altgr"],
+        "baseCode": 6
       },
       {
         "code": 2093,
@@ -878,6 +904,21 @@
       {
         "code": 0,
         "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
+        "categories": ["blanks"]
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
+      },
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
         "categories": ["blanks"]
       },
       {
@@ -903,44 +944,6 @@
           "base": "Forward"
         },
         "categories": ["mousekeys"]
-      },
-      {
-        "code": 0,
-        "label": {"base": {"full": "Blocked", "1u": "Blkd"}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
-      {
-        "code": 2078,
-        "label": {"hint": null, "base": "!"},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 30
-      },
-      {
-        "code": 2079,
-        "label": {"hint": null, "base": "\""},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 31
-      },
-      {
-        "code": 2080,
-        "label": {"hint": null, "base": "£"},
-        "categories": ["with-modifiers", "shift"],
-        "baseCode": 32
       },
       {
         "code": 53596,

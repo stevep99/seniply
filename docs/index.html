@@ -94,7 +94,6 @@ function closeModalImage() {
 </script>
 
 
-
 <figure id="seniply_us_matrix_all">
   <img onclick="showModalImage(this)" style="padding-bottom: 0" src="gfx/seniply_us_matrix_all.png" alt="Colemak-DH Seniply (US) for a small matrix keyboard"/>
   <img src="gfx/layer_selection.png" style="padding-top: 0"/>
@@ -211,7 +210,7 @@ function closeModalImage() {
   showSeniplyMatrixSymbols1(1);
 </script>
 
-  <p>Additional symbols are provided by Symbols1 and Symbols2 layers. The Symbols1 layer has the most frequent symbols and is activated by holding the right-most thumb key. Numbers and basic mathematical symbols are on the right-hand side, arranged in Numpad style for convenience. The most common remaining symbols, such as brackets, backslash, colon and semicolon, are on the left-hand side. Note also that each Bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since opening and closing brackets are not usually typed together. In fact the opening bracket is often more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
+  <p>Additional symbols are provided by Symbols1 and Symbols2 layers. The Symbols1 layer has the most frequent symbols and is activated by holding the right-most thumb key. Numbers and basic mathematical symbols are on the right-hand side, arranged in Numpad style for convenience. The most common remaining symbols, such as brackets, colon, semicolon, and shifted number symbols are on the left-hand side. Note also that each Bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since opening and closing brackets are not usually typed together. In fact the opening bracket is often more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
 
 <figure id="seniply_us_matrix_symbols2">
   <img onclick="showModalImage(this)" src="gfx/seniply_us_matrix_symbols2.png" alt="Seniply Sym2 layer"/>
@@ -240,8 +239,7 @@ function closeModalImage() {
   showSeniplyMatrixSymbols2(1);
 </script>
 
-<p>The Symbols2 layer has the remaining standard symbols found on keyboards, including those normally output via shifted number keys. For easy recall, the symbols corresponding to Shift+1-7
-are assigned to the corresponding number key in the Symbols1 layer (note, the characters <code><nobr>* ( )</nobr></code> have been already assigned). The remaining vacant positions on the right-hand side are assigned to characters such as <code>`</code>, <code>_</code>, and a selection of less common characters. The left-hand side provides mouse button and movement keys where supported - alternatively these could be substituted for custom characters or macros according to user preference. On keyboards with multiple thumb keys, you may prefer to assign Symbols2 activation to a single key.</p>
+<p>The Symbols2 layer has the remaining standard symbols found on keyboards, including backslash, pipe, underscore, etc, plus a number of additional characters that users may wish to customize. The right-hand side provides mouse button and movement keys where supported. On keyboards with multiple thumb keys, you may prefer to assign Symbols2 activation to a single key. The keys marked @L1, @L2 are reserved for layer switching commands (e.g. for switching to Qwerty for gaming modes etc).</p>
 
 <p>Extra care is needed when assigning unicode characters to keys that are not usually defined in your operating system's keymap. For these to be printed correctly, the OS must translate a sequence of keycodes to printable characters, for example using <a href="https://en.wikipedia.org/wiki/Compose_key">Compose</a>. On Linux, the "Menu" key <code>☰</code> is often defined as Compose. In operating systems that don't support Compose natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows.</p>
 

@@ -1,7 +1,7 @@
 (defcfg
   ;; ** For Linux **
-  input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
-  ;;input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  ;;input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
   output (uinput-sink "KMonad seniply-iso-wide")
   cmp-seq cmp
 
@@ -33,8 +33,8 @@
 (defalias
   ext  (layer-toggle extend) ;; Bind 'ext' to the Extend Layer
   fun  (layer-toggle function) ;; Bind 'fun' to the Function Layer
-  sym1 (layer-toggle symbols1) ;; Bind 'sym1' to Symbols Layer 1
-  sym2 (layer-toggle symbols2) ;; Bind 'sym2' to Symbols Layer 2
+  sym (layer-toggle symbols) ;; Bind 'sym' to Symbols Layer
+  num (layer-toggle numbers) ;; Bind 'num' to Numbers Layer
 )
 
 (defalias 
@@ -86,18 +86,18 @@
   esc      f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
   grv      1     2     3     4     5     6     7     8     9     0     -     =     spc
   tab      q     w     f     p     b     [     j     l     u     y     '     \
-  lmet     a     r     s     t     g     ]     m     n     e     i     o     ;     ret
+  @num     a     r     s     t     g     ]     m     n     e     i     o     ;     ret
   lsft  z     x     c     d     v     z     /     k     h     ,     .     rsft
-  lctl        lalt  @ext              lsft              spc   @sym1 @sym1 _
+  lctl        lalt  @ext              lsft              spc   @sym  @sym  _
 )
 
 (deflayer qwerty-sp
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _
-  _        _     _     _     _     _     _     _     _     _     _     _     _     _ 
+  @num     _     _     _     _     _     _     _     _     _     _     _     _     _ 
   _    _      _     _     _     _     _     _     _     _     _     _     _
-  _           lalt  @ext              _                 @sym1 ralt  rmet  _
+  _           lalt  @ext              _                 @sym  ralt  rmet  _
 )
 
 
@@ -106,42 +106,42 @@
   _        f1    f2    f3    f4    f5    f6    f7    f8    f9   f10    f11   f12   _
   _        esc   @bk   @fnd  @fw   ins   ssrq  pgup  home  up    end   caps  cmp
   _        @la_s @lm_s @ls_s @lc_s @ra_s slck  pgdn  lft   down  rght  del   menu  _
-  _     @udo  @cut  @cpy  lmet  @pst  @udo  _     ssrq  bks   tab    cmp  ret
-  _            _    _                 _                 ret   @fun  _     _
+  _     @udo  @cut  @cpy  lmet  @pst  @udo  _     ret   bks   tab    cmp  ssrq
+  _            _    _                 @num               ret   @fun  _     _
 )
 
 (deflayer function
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @mst  @mps  @mpp  @mns  @b-   _     f12   f7    f8    f9    C-+   _
-  _        @la_s @lm_s @ls_s @lc_s @b+   _     f11   f4    f5    f6    C--   _     _
-  _     @v0   @v-   @scpy @v+   @spst _     _     f10   f1    f2    f3    C-0
+  _        @mst  @mps  @mpp  @mns  @b-   _     f12   f7    f8    f9    slck  _
+  _        @la_s @lm_s @ls_s @lc_s @b+   _     f11   f4    f5    f6    @l_dh _     _
+  _     @v0   @v-   @scpy @v+   @spst _     _     f10   f1    f2    f3    @l_qw
   _           _     _                 _                 _     _     _     _
 )
 
-(deflayer symbols1
+(deflayer symbols
   _        _     _     _     _     _     _     _     _     _     _     _     _
   _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        S-1   S-2   S-3   S-4   S-5   «     =     7     8     9     +     _
-  _        ;     :     {     \(    [     »     *     4     5     6     -     _     _
-  _     S-6    S-7  }   \)    ]     nubs  _     0     1     2     3    /
-  _           _     @fun              @sym2             _     _     _    _
+  _        S-1   S-2   S-3   S-4   S-5   «     =     `     :     ;     +     _
+  _        @la_s @lm_s @ls_s @lc_s S-6   »     *     \(    {     [     -     _     _
+  _     nubs  S-nubs \\   S-\\  S-7   nubs  _     ¬     \)    }     ]     \_
+  _           _     @fun              @num              _     _     _     _
 )
 
-(deflayer symbols2
+(deflayer numbers
   _        _     _     _     _     _     _     _     _     _     _     _     _
-  _        _     _     _     _     _     _     _     _     _     _     _     _     _
-  _        @ra1  @ra2  @ra3  @ra4  _     _     ≠     S-7   S-8   ±     @l_qw _
-  _        nubs  S-nubs \\   S-\\  ®     _     ×     S-4   S-5   S-6   \_    _     _
-  _     `     S-`   ¢     S--   ™     `     _    °     S-1   S-2   S-3   @l_dh
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     nlck  _     =     7     8     9     +     _
+  _        @la_s @lm_s @ls_s @lc_s @ra_s _     *     4     5     6     -     _     _
+  _     _     cmp   tab   bks   ret   _     _     0     1     2     3     /
   _           _     _                 _                 _     _     _     _
 )
 
 (deflayer empty
-  _        _    _    _    _    _    _    _    _    _    _    _    _    
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _
-  _        _    _    _    _    _    _    _    _    _    _    _    _ 
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _ 
-  _    _     _    _    _    _    _    _    _    _    _    _    _ 
-  _        _    _              _              _    _    _    _
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _ 
+  _    _      _     _     _     _     _     _     _     _     _     _     _
+  _          _    _                   _                 _     _     _     _
 )

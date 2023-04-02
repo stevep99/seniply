@@ -174,7 +174,7 @@ function closeModalImage() {
   <figcaption>The Seniply Function layer, activated by pressing two-thumb keys.</figcaption>
 </figure>
 
-<p>To accommodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. This is accessed by holding down the two outermost thumb-keys, or, on keyboards with support for additional thumb keys, you may prefer to map it to a spare single key. The function keys are mapped on the right-hand side, following a familiar Numpad-like convention for ease of learning. As with the Extend layer, home-row modifiers are available to combine with function keys. Mappings are also provided for browser zoom (Ctrl-plus/minus), screen brightness, plus media and volume controls.</p>
+<p>To accommodate the reduced number of keys, the function keys are mapped in a dedicated Function layer. This is accessed by holding down the two outermost thumb-keys, or, on keyboards with support for additional thumb keys, you may prefer to map it to a spare single key. The function keys are mapped on the right-hand side, following a familiar Numpad-like convention for ease of learning. As with the Extend layer, home-row modifiers are available to combine with function keys. Mappings are also provided for screen brightness, media and volume controls. There are also keys marked @L0 and @L1 which are reserved for switching the base layout (e.g. for switching to Qwerty for gaming modes etc).</p>
 
 <p>Examples:<br/>
 (i) Output F11 using <code>Ext-Sym-m</code><br/>
@@ -183,22 +183,22 @@ function closeModalImage() {
 
 <h4>Symbols Layer</h4>
 
-<figure id="seniply_us_matrix_symbols1">
-  <img onclick="showModalImage(this)" src="gfx/seniply_us_matrix_symbols1.png" alt="Seniply Sym1 layer"/>
-  <figcaption>The Seniply Symbols1 layer (US variant), activated via a right-thumb key.</figcaption>
+<figure id="seniply_us_matrix_symbols">
+  <img onclick="showModalImage(this)" src="gfx/seniply_us_matrix_symbols.png" alt="Seniply Sym layer"/>
+  <figcaption>The Seniply Symbols layer (US variant), activated via a right-thumb key.</figcaption>
 </figure>
-<figure id="seniply_uk_matrix_symbols1">
-  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_symbols1.png" alt="Seniply Sym1 layer"/>
-  <figcaption>The Seniply Symbols1 layer (UK variant), activated via a right-thumb key.</figcaption>
+<figure id="seniply_uk_matrix_symbols">
+  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_symbols.png" alt="Seniply Sym layer"/>
+  <figcaption>The Seniply Symbols layer (UK variant), activated via a right-thumb key.</figcaption>
 </figure>
 <div style="text-align:center">
-  <input type="radio" name="seniply_matrix_symbols1" checked="checked" onclick="showSeniplyMatrixSymbols1(1)"/>US variant &nbsp;&nbsp;
-  <input type="radio" name="seniply_matrix_symbols1" onclick="showSeniplyMatrixSymbols1(2)";>UK variant
+  <input type="radio" name="seniply_matrix_symbols" checked="checked" onclick="showSeniplyMatrixSymbols(1)"/>US variant &nbsp;&nbsp;
+  <input type="radio" name="seniply_matrix_symbols" onclick="showSeniplyMatrixSymbols(2)";>UK variant
 </div>
 <script>
-  function showSeniplyMatrixSymbols1(visibleId) {
-    var panel1 = document.getElementById('seniply_us_matrix_symbols1');
-    var panel2 = document.getElementById('seniply_uk_matrix_symbols1');
+  function showSeniplyMatrixSymbols(visibleId) {
+    var panel1 = document.getElementById('seniply_us_matrix_symbols');
+    var panel2 = document.getElementById('seniply_uk_matrix_symbols');
     if (visibleId == 1) {
       panel1.style.display = "block";
       panel2.style.display = "none";
@@ -207,41 +207,34 @@ function closeModalImage() {
       panel2.style.display = "block";  
     }
   }
-  showSeniplyMatrixSymbols1(1);
+  showSeniplyMatrixSymbols(1);
 </script>
 
-  <p>Additional symbols are provided by Symbols1 and Symbols2 layers. The Symbols1 layer has the most frequent symbols and is activated by holding the right-most thumb key. Numbers and basic mathematical symbols are on the right-hand side, arranged in Numpad style for convenience. The most common remaining symbols, such as brackets, colon, semicolon, and shifted number symbols are on the left-hand side. Note also that each Bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since opening and closing brackets are not usually typed together. In fact the opening bracket is often more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
+<p>Non-alphabetic symbols (excluding numbers) are provided by the Symbols layer, activated by holding the right-most thumb key. Common symbols such as brackets, colon and semicolon are on the right, with shifted-number characters on the usual sequence on the left, together with the remaining symbols. Modifiers are also provided along the left-hand side home-row for for easy combination with symbol keys; these work the same as in the Extend layer. Some mathematical symbols are also provided in the same positions as in the Number layer. Note also that each bracket type is assigned a finger, e.g. <code>(</code> and <code>)</code> are both on the index finger - this does not cause a same-finger bigram since opening and closing brackets are not usually typed together. In fact the opening bracket is often more common as many editing tools (such as IDEs) automatically fill in the closing bracket, hence in this layer it is the opening brackets that occupy the home positions.</p>
 
-<figure id="seniply_us_matrix_symbols2">
-  <img onclick="showModalImage(this)" src="gfx/seniply_us_matrix_symbols2.png" alt="Seniply Sym2 layer"/>
-  <figcaption>The Seniply Symbols2 layer (US variant), activated by pressing two thumb keys.</figcaption>
+<p>Examples:<br/>
+Output Ctrl-plus (Browser zoom) using <code>Sym-t-'</code><br/>
+Output Alt-backtick using <code>Sym-a-l</code></p>
+
+<h4>Numbers Layer</h4>
+
+<figure id="seniply_uk_matrix_numbers">
+  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_numbers.png" alt="Seniply Numbers layer"/>
+  <figcaption>The Seniply Numbers layer, activated either by pressing two thumb keys, or a single custom key.</figcaption>
 </figure>
-<figure id="seniply_uk_matrix_symbols2">
-  <img onclick="showModalImage(this)" src="gfx/seniply_uk_matrix_symbols2.png" alt="Seniply Sym2 layer"/>
-  <figcaption>The Seniply Symbols2 layer (UK variant), activated by pressing two thumb keys.</figcaption>
-</figure>
-<div style="text-align:center">
-  <input type="radio" name="seniply_matrix_symbols2" checked="checked" onclick="showSeniplyMatrixSymbols2(1)"/>US variant &nbsp;&nbsp;
-  <input type="radio" name="seniply_matrix_symbols2" onclick="showSeniplyMatrixSymbols2(2)";>UK variant
-</div>
-<script>
-  function showSeniplyMatrixSymbols2(visibleId) {
-    var panel1 = document.getElementById('seniply_us_matrix_symbols2');
-    var panel2 = document.getElementById('seniply_uk_matrix_symbols2');
-    if (visibleId == 1) {
-      panel1.style.display = "block";
-      panel2.style.display = "none";
-    } else if (visibleId == 2) {
-      panel1.style.display = "none";
-      panel2.style.display = "block";  
-    }
-  }
-  showSeniplyMatrixSymbols2(1);
-</script>
 
-<p>The Symbols2 layer has the remaining standard symbols found on keyboards, including backslash, pipe, underscore, etc, plus a number of additional characters that users may wish to customize. The right-hand side provides mouse button and movement keys where supported. On keyboards with multiple thumb keys, you may prefer to assign Symbols2 activation to a single key. The keys marked @L1, @L2 are reserved for layer switching commands (e.g. for switching to Qwerty for gaming modes etc).</p>
+<p>The Numbers layer has numbers and basic mathematical symbols are on the right-hand side, arranged in a Numpad configuration for convenience. Again, modifiers are provided to allow easy typing of certain applications' shortcuts. In the 34-key implementation, the Number layer is accessed via two thumb keys - the Sym and Shift keys - but you may prefer to assign this layer to a single key. It is recommended to use either an additional left-hand thumb key where available, or the CapsLock key position on a regular keyboard.</p>
 
-<p>Extra care is needed when assigning unicode characters to keys that are not usually defined in your operating system's keymap. For these to be printed correctly, the OS must translate a sequence of keycodes to printable characters, for example using <a href="https://en.wikipedia.org/wiki/Compose_key">Compose</a>. On Linux, the "Menu" key <code>☰</code> is often defined as Compose. In operating systems that don't support Compose natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows.</p>
+<p>Example:<br/>
+Output Ctrl-4 using <code>Num-t-n</code><br/>
+Output AltGr-1 (<code>¹</code>) using <code>Num-g-h</code></p>
+
+<a name="customization"><h3>Customization</h3></a>
+
+<p>Seniply is designed to be easily customized if you have additional requirements, such as supporting multiple languages or extra symbols. Also note that in most implementations, the keycodes themselves are being remapped, whereas the task of converting keycodes to characters is done by the operating system. So you may get varying results by setting other national keyboard layouts in your system's options — the US and UK symbols layers are shown above as indicative examples. There are some undefined mappings in the Number layer to allow additional custom mappings to be defined.</p>
+
+
+<p>Extra care is needed when assigning unicode characters to keys that are not usually defined in your OS's currently selected keymap. For these to be printed correctly, the OS must translate a sequence of keycodes to printable characters, for example using <a href="https://en.wikipedia.org/wiki/Compose_key">Compose</a>. On Linux, the "Menu" key <code>☰</code> is often defined as Compose. In operating systems that don't support Compose natively, this feature can be provided by an external tool, such as <a href="https://github.com/samhocevar/wincompose">WinCompose</a> for Windows.</p>
 
 <p>A further note regarding symbols: is possible to type any of the symbols that would normally be made available via the AltGr key, where configured on your system. For example, if AltGr-a usually produces <code>æ</code> on your system, you can reproduce this with <code>Ext-G&nbsp;a</code>. Using this technique substantially increases the number of symbols that are available just using keys right under your fingertips!</p>
 

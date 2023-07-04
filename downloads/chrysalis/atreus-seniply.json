@@ -126,7 +126,7 @@
       {"code": 20, "label": {"base": "q", "shifted": "Q"}},
       {"code": 26, "label": {"base": "w", "shifted": "W"}},
       {"code": 8, "label": {"base": "e", "shifted": "E", "altgr": "é"}},
-      {"code": 19, "label": {"base": "p", "shifted": "P"}},
+      {"code": 21, "label": {"base": "r", "shifted": "R"}},
       {"code": 23, "label": {"base": "t", "shifted": "T"}},
       {
         "code": 0,

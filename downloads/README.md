@@ -4,7 +4,7 @@ Colemak-DH Seniply - Downloads
 
 [Seniply](https://stevep99.github.io/seniply/) is an ergonomic, minimal keyboard layout with six layers, designed for a keyboard with at least 34 keys.
 
-Curently available implementations:
+Currently available implementations:
 
 <a href="https://github.com/stevep99/seniply/tree/master/downloads/kmonad/"><img src="../docs/gfx/icon_download.png" alt="[download]" style="vertical-align:middle"/>&nbsp;KMonad files</a>
 
